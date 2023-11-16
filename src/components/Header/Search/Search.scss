@@ -1,0 +1,138 @@
+.search-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    animation: slideSearchWindow 0.5s ease forwards;
+    .form-field {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 10px 50px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        position: relative;
+        .inp {
+            width: 100%;
+            max-width: 1200px;
+            height: 70px;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 600;
+            border: none;
+            &::placeholder {
+                color: #212121;
+            }
+        }
+        
+    }
+    .search-result-content {
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+        padding: 30px;
+        .start-msg {
+            text-align: center;
+            margin-top: 20px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+        .search-results {
+            height: calc(100vh - 110px);
+            overflow: auto;
+            .search-result-item {
+                background-color: rgba(0, 0, 0, 0.05);
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px;
+                border-radius: 12px;
+                cursor: pointer;
+                .image-container {
+                    width: 180px;
+                    height: 180px;
+                    overflow: hidden;
+                    border-radius: 12px;
+                    img {
+                        scale: 1.2;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .prod-details {
+                    overflow: hidden;
+                    .name {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        font-size: 25px;
+                        line-height: 1;
+                        margin-bottom: 10px;
+                        font-weight: 600;
+                        display: block;
+                    }
+                    .desc {
+                        font-size: 16px;
+                        line-height: 1;
+                        display: block;
+                        margin-bottom: 10px;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        color: rgba(0, 0, 0, 0.5);
+                    }
+                    .price{
+                        font-size: 16px;
+                        line-height: 1;
+                        display: block;
+                        margin-bottom: 10px;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                    .rating{
+                        font-size: 16px;
+                        align-items: center;
+                        line-height: 1;
+                        display: block;
+                        margin-bottom: 10px;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        .star{
+                            color: #f4c730;
+                            margin-left: 2px;
+                            margin-right: 2px;
+                        }
+                    }
+                    .ctas {
+                        display: flex;
+                        justify-content: left;
+                        gap: 20px;
+                        .banner-cta {
+                            font-size: 16px;
+                            font-weight: 500;
+                            background-color: black;
+                            padding: 10px 20px;
+                            transition: all ease 0.3s;
+                            &.v2 {
+                                background-color: white;
+                                color: black;
+                            }
+                            &:hover {
+                                opacity: 0.6;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+@keyframes slideSearchWindow {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

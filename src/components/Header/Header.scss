@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@600&display=swap');
+
+.main-header {
+    width: 100%;
+    padding: 0 40px;
+    z-index: 99;
+    background-color: #F5F7F8;
+    color: black;
+    border-bottom: 1px solid;
+    border-color: rgba(0, 0, 0, 0.1);
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .left {
+        list-style-type: none;
+        display: flex;
+        gap: 25px;
+        li {
+            font-size: 17px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+    .center {
+        font-family: 'Cairo Play', sans-serif;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 45px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .right {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        svg {
+            font-size: 25px;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+        .cart-icon {
+            position: relative;
+            span {
+                min-width: 20px;
+                text-align: center;
+                background: red;
+                color: white;
+                padding: 2.5px;
+                position: absolute;
+                top: -5px;
+                right: -12px;
+                font-size: 12px;
+                line-height: 1;
+                border-radius: 50%;
+            }
+        }
+    }
+    &.sticky-header {
+        background-color: #F5F7F8;
+        color: black;
+        position: sticky;
+        top: 0;
+        transform: translateY(-60px);
+        animation: StickyHeader 0.3s ease forwards;
+    }
+}
+.close-btn{
+    position: absolute;
+    right: 40px;
+}
+@keyframes StickyHeader {
+    0% {
+        transform: translateY(-60px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

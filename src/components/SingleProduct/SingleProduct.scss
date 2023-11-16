@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Montserrat&display=swap');
+.single-product-main-content {
+    margin: 75px 0;
+    .layout {
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 1200px;
+        .single-product-page {
+            display: flex;
+            flex-direction: row;
+            .left {
+                flex-shrink: 0;
+                width: 500px;
+                height: auto;
+                img {
+                    border-radius: 20px;
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+            }
+            .right {
+                display: flex;
+                flex-direction: column;
+                padding: 35px 35px 35px 35px;
+                .name {
+                    font-family: 'Kanit', sans-serif;
+                    margin-bottom: 20px;
+                    font-size: 40px;
+                    line-height: 35px;
+                }
+                .price {
+                    font-family: 'Kanit', sans-serif;
+                    font-size: 24px;
+                    line-height: 32px;
+                    margin-bottom: 20px;
+                }
+                .desc {
+                    font-family: 'Kanit', sans-serif;
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-bottom: 20px;
+                    color: #6b6b6b;
+                }
+                .list{
+                    align-items: center;
+                    font-family: 'Kanit', sans-serif;
+                    font-size: 25px;
+                    line-height: 25px;
+                    .head{
+                        font-family: 'Kanit', sans-serif;
+                        font-size: 18px;
+                        margin-bottom: 7px;
+                    }
+                    .colour{
+                        text-align: center;
+                        size: 25px;
+                        width: 200px;
+                        height: 28px;
+                    }
+                }
+
+                .cart-buttons {
+                    margin-top: 30px;
+                    .head{
+                        font-family: 'Kanit', sans-serif;
+                        font-size: 18px;
+                        margin-bottom: 7px;
+                    }
+                    .quantity-buttons {
+                        width: fit-content;
+                        display: flex;
+                        border: 2px solid rgba(0, 0, 0, 0.2);
+                        border-radius: 10px;
+                        margin-right: 10px;
+                        height: 50px;
+                        span {
+                            font-family: 'Kanit', sans-serif;
+                            font-size: 22px;
+                            width: 40px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                            color: #6b6b6b;
+                            &:nth-child(1) {
+                                border-right: 2px solid rgba(0, 0, 0, 0.2);
+                            }
+                            &:nth-child(2) {
+                                width: 60px;
+                            }
+                            &:nth-child(3) {
+                                border-left: 2px solid rgba(0, 0, 0, 0.2);
+                            }
+                        }
+                        .btn{
+                            background-color: rgba(0, 0, 0, 0.1);
+                        }
+                    }
+                    .button {
+                        padding: 20px 15px;
+                        .add-to-cart-button {
+                            outline: 0;
+                            border: none;
+                            height: 60px;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                            font-size: 20px;
+                            color: white;
+                            background: black;
+                        }
+                    }
+                }
+
+                .divider {
+                    margin: 20px 0;
+                    height: 1px;
+                    width: 100%;
+                    background-color: rgba(0, 0, 0, 0.1);
+                }
+
+                .info-item {
+                    .text-bold {
+                        font-size: 18px;
+                        font-weight: 500;
+                        display: block;
+                        .head{
+                            font-family: 'Kanit', sans-serif;
+                            font-size: 18px;
+                            margin-bottom: 7px;
+                        }
+                        &:nth-child(1) {
+                            margin-bottom: 20px;
+                        }
+                        span {
+                            font-size: 18px;
+                            font-weight: 400;
+                            cursor: pointer;
+                            color: #6b6b6b;
+                        }
+                        svg {
+                            margin: 0 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
